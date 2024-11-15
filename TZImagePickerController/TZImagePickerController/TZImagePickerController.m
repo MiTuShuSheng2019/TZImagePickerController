@@ -598,6 +598,11 @@
     [TZImageManager manager].hideWhenCanNotSelect = hideWhenCanNotSelect;
 }
 
+-(void)setMaxDuration:(NSInteger)maxDuration {
+    _maxDuration = maxDuration;
+    [TZImageManager manager].maxDuration = maxDuration;
+}
+
 - (void)setPhotoPreviewMaxWidth:(CGFloat)photoPreviewMaxWidth {
     _photoPreviewMaxWidth = photoPreviewMaxWidth;
     if (photoPreviewMaxWidth > 800) {

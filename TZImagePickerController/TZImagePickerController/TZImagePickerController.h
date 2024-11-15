@@ -188,6 +188,10 @@
 /// statusBar的样式，默认为UIStatusBarStyleLightContent
 @property (assign, nonatomic) UIStatusBarStyle statusBarStyle;
 
+/**** LY 新增 *********/
+/** 视频最大时长，单位秒，大于这个阈值的都会过滤掉，不设则不过滤 */
+@property (nonatomic, assign) NSInteger maxDuration;
+
 #pragma mark -
 /// Single selection mode, valid when maxImagesCount = 1
 /// 单选模式,maxImagesCount为1时才生效

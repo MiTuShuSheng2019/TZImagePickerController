@@ -265,6 +265,11 @@ static dispatch_once_t onceToken;
             return nil;
         }
     }
+    if (self.maxDuration > 0) {
+        if (phAsset.duration > self.maxDuration) {
+            return nil;
+        }
+    }
     NSString *timeLength = type == TZAssetModelMediaTypeVideo ? [NSString stringWithFormat:@"%0.0f",phAsset.duration] : @"";
     timeLength = [self getNewTimeFromDurationSecond:timeLength.integerValue];
     model = [TZAssetModel modelWithAsset:asset type:type timeLength:timeLength];

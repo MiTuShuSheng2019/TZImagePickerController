@@ -46,6 +46,10 @@
 @property (nonatomic, assign) NSInteger minPhotoHeightSelectable;
 @property (nonatomic, assign) BOOL hideWhenCanNotSelect;
 
+/**** LY 新增 *********/
+/** 视频最大时长，单位秒，大于这个阈值的都会过滤掉，不设则不过滤 */
+@property (nonatomic, assign) NSInteger maxDuration;
+
 /// Return YES if Authorized 返回YES如果得到了授权
 - (BOOL)authorizationStatusAuthorized;
 - (void)requestAuthorizationWithCompletion:(void (^)(void))completion;
